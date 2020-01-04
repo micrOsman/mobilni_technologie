@@ -56,7 +56,12 @@
 				</div>
 			</div>
 	</div>
+	<div id="results" class="weather-card">
+		<div class="input-group">
+			<h6>History (by click repeat search): </h6>
 
+		</div>
+	</div>
 	<div id="weather-template" class="weather-card" hidden>
 		<div class="card-spinner">
 			<svg viewBox="0 0 32 32" width="32" height="32">

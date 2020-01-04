@@ -48,6 +48,7 @@ function searchCountry(){
           $("#about").after(data.html);
           spinner.style.display="none";
           addToLocalStorageString('locationList',country.value,',');
+          $("#results .input-group").append( "<button type=\"button\" class=\"btn btn-primary\">"+country.value+"</button>" );
         }, error: function (data) {
 
         }
@@ -56,7 +57,7 @@ function searchCountry(){
     error: function (response){
       notie.force({
         type: 3,
-        text: 'Zadaná země neexistuje, zadejte prosím jinou.',
+        text: 'The country you specified does not exist, please enter another.',
         buttonText: 'OK',
         callback: function () {
           spinner.style.display="none";
@@ -66,7 +67,6 @@ function searchCountry(){
   };
 
   $.ajax(settings).done(function (response) {
-
     //getForecastCard(response)
   });
 }
@@ -194,6 +194,23 @@ function loadLocationList() {
   return locations;
 }
 
+function loadCacheItems(){
+  let locations = localStorage.getItem('locationList');
+
+  if (locations) {
+    try {
+      let cacheItems = locations.split(',');
+      document.querySelector('#results').style.display = "block";
+      var i;
+      for (i = 0; i < cacheItems.length; i++) {
+          $("#results .input-group").append( "<button type=\"button\" class=\"btn btn-primary\">"+cacheItems[i]+"</button>" );
+      }
+    } catch (ex) {
+      locations = {};
+    }
+  }
+}
+
 /**
  * Initialize the app, gets the list of locations from local storage, then
  * renders the initial data.
@@ -202,7 +219,8 @@ function init() {
   // Get the location list, and update the UI.
   weatherApp.selectedLocations = loadLocationList();
   //updateData();
-
+  //Function for loading cache items
+  loadCacheItems();
   // Set up the event handlers for all of the buttons.
   document.getElementById('butRefresh').addEventListener('click', updateData);
   document.getElementById('butAdd').addEventListener('click', toggleAddDialog);
