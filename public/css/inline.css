@@ -117,10 +117,10 @@ body {
     display: none;
 }
 #results .input-group h6{
-    margin-top: 7px;
+    margin-top: 11px;
 }
 #results .input-group button{
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 .card-spinner {
     background-color: rgba(255, 255, 255, 0.8);
