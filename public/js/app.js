@@ -20,6 +20,50 @@ function saveLocationCache(locations) {
 
 
 /**
+ * Search country from user input.
+ */
+function searchCountry(){
+  const country = document.getElementById('countryInput');
+  const spinner = document.querySelector('.card-spinner');
+  spinner.style.display="block";
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://restcountries-v1.p.rapidapi.com/name/"+country.value,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+      "x-rapidapi-key": "379758d4a7mshcf9c05972f98022p1737f3jsne0e6815fcba2"
+    },
+    success: function (response) {
+      $.ajax({
+        url: 'home/location',
+        type: 'POST',
+        data: {
+          'object': response,
+        },
+        dataType: 'json',
+        success: function (data) {
+          $("#about").after(data.html);
+          spinner.style.display="none";
+        }, error: function (data) {
+
+        }
+
+
+      });
+    }
+  };
+
+  $.ajax(settings).done(function (response) {
+
+    //getForecastCard(response)
+  });
+}
+
+
+
+/**
  * Event handler for butDialogAdd, adds the selected location to the list.
  */
 function addLocation() {
