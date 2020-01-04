@@ -14,7 +14,7 @@
 	<link rel="manifest" href="/mob_tech/manifest.json">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.css" integrity="sha256-riQq/IR4tjk1PZxADrk953XR1tEk0uismMeRjW6xaL0=" crossorigin="anonymous" />
 	<!-- IOS Meta tags -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -198,7 +198,7 @@
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.js" integrity="sha256-qYjc/rYiyC3fRkJ0uhvlRHog1iWl5TLR9d/PpzUYbh0=" crossorigin="anonymous"></script>
 <script src="js/luxon-1.11.4.js"></script>
 <script src="js/app.js"></script>
 <!-- CODELAB: Add the install script here -->

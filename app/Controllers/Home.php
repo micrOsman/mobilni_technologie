@@ -34,7 +34,7 @@ class Home extends BaseController
 				</div>
 			</div>
 			<div class=\"description\">
-				    <div style=\"width: 100%;position: relative;\"><iframe width=\"300\" height=\"150\" src=\"https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=$data_object->name&amp;ie=UTF8&amp;t=&amp;z=5&amp;iwloc=B&amp;output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><div style=\"position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;\"><small style=\"line-height: 1.8;font-size: 2px;background: #fff;\">Powered by <a href=\"http://www.googlemapsgenerator.com/pt/\">Googlemapsgenerator.com/pt/</a> & <a href=\"https://botonmegusta.org/en/\">http://botonmegusta.org/en/</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+				    <div style=\"width: 100%;position: relative;\"><iframe width=\"100%\" height=\"100%\" src=\"https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=$data_object->name&amp;ie=UTF8&amp;t=&amp;z=5&amp;iwloc=B&amp;output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><div style=\"position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;\"><small style=\"line-height: 1.8;font-size: 2px;background: #fff;\">Powered by <a href=\"http://www.googlemapsgenerator.com/pt/\">Googlemapsgenerator.com/pt/</a> & <a href=\"https://botonmegusta.org/en/\">http://botonmegusta.org/en/</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
 
 			</div>
 		</div>

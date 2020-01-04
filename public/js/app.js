@@ -13,9 +13,9 @@ function toggleAddDialog() {
 }
 
 
-function saveLocationCache(locations) {
-  const data = JSON.stringify(locations);
-  localStorage.setItem('locationList', data);
+function updateLocations(country) {
+  //const data = JSON.stringify(locations);
+  localStorage.setItem('locationList', country);
 }
 
 
@@ -36,6 +36,7 @@ function searchCountry(){
       "x-rapidapi-key": "379758d4a7mshcf9c05972f98022p1737f3jsne0e6815fcba2"
     },
     success: function (response) {
+
       $.ajax({
         url: 'home/location',
         type: 'POST',
@@ -46,12 +47,21 @@ function searchCountry(){
         success: function (data) {
           $("#about").after(data.html);
           spinner.style.display="none";
+          addToLocalStorageString('locationList',country.value,',');
         }, error: function (data) {
 
         }
-
-
       });
+    },
+    error: function (response){
+      notie.force({
+        type: 3,
+        text: 'Zadaná země neexistuje, zadejte prosím jinou.',
+        buttonText: 'OK',
+        callback: function () {
+          spinner.style.display="none";
+        }
+      })
     }
   };
 
@@ -61,7 +71,14 @@ function searchCountry(){
   });
 }
 
-
+var addToLocalStorageString = function (name, value, delimiter) {
+  // Get the existing data
+  var existing = localStorage.getItem(name);
+  // If no existing data, use the value by itself
+  // Otherwise, add the new value to it
+  var data = existing ? existing + delimiter + value : value;
+  localStorage.setItem(name, data);
+};
 
 /**
  * Event handler for butDialogAdd, adds the selected location to the list.
@@ -156,6 +173,8 @@ function saveLocationList(locations) {
   const data = JSON.stringify(locations);
   localStorage.setItem('locationList', data);
 }
+
+
 
 /**
  * Loads the list of saved location.
