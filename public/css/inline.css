@@ -364,6 +364,7 @@ body {
 }
 
 .weather-card .remove-city {
+    cursor: pointer;
     background-color: transparent;
     border: none;
     float: right;

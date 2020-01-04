@@ -68,7 +68,7 @@
 				<circle cx="16" cy="16" r="14" fill="none"></circle>
 			</svg>
 		</div>
-		<button class="remove-city" id="remove-city">&times;</button>
+		<button class="remove-city location_state">&times;</button>
 		<div class="city-key" hidden></div>
 		<div class="card-last-updated" hidden></div>
 		<div class="location" id="location">&nbsp;</div>

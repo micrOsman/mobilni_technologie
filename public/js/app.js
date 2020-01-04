@@ -103,17 +103,15 @@ function addLocation() {
 }
 
 /**
- * Event handler for .remove-city, removes a location from the list.
+ * Event handler for remove city card.
  *
  * @param {Event} evt
  */
-function removeLocation(evt) {
+function removeLocation() {
+  console.log(evt);
   const parent = evt.srcElement.parentElement;
   parent.remove();
-  if (weatherApp.selectedLocations[parent.id]) {
-    delete weatherApp.selectedLocations[parent.id];
-    saveLocationList(weatherApp.selectedLocations);
-  }
+
 }
 
 /**
@@ -211,6 +209,12 @@ function loadCacheItems(){
   }
 }
 
+  $(document).on('click','.remove-city',function (e) {
+    $(this).parent('div').remove();
+  });
+
+
+
 /**
  * Initialize the app, gets the list of locations from local storage, then
  * renders the initial data.
@@ -232,6 +236,7 @@ function init() {
   // Custom code
   document.getElementById('search_for_country')
       .addEventListener('click', searchCountry);
+
 }
 
 init();
