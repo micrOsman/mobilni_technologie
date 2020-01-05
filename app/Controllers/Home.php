@@ -6,6 +6,10 @@ class Home extends BaseController
 	{
 		return view('welcome_message');
 	}
+	public function offline()
+	{
+		return view('offline');
+	}
 	public function location(){
 		$data = $_POST['object'];
 		$data_access = $data[0];
