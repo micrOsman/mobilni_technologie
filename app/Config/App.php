@@ -15,13 +15,13 @@ class App extends BaseConfig
 	|
 	|	http://example.com/
 	|
-	| If this is not set then CodeIgniter will try guess the protocol, domain
+	| If this cmdis not set then CodeIgniter will try guess the protocol, domain
 	| and path to your installation. However, you should always configure this
 	| explicitly and never rely on auto-guessing, especially in production
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080';
+	public $baseURL = 'http://127.0.0.1/mob_tech';
 
 	/*
 	|--------------------------------------------------------------------------

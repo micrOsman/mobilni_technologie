@@ -73,11 +73,12 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/info', 'Home::info');
+$routes->get('/contact', 'Home::contact');
 $routes->get('/offline', 'Home::offline');
 //Added route for ajax call
 $route['/mob_tech/home/location'] = "app/controllers/home/location";
 $route['home/location'] = "app/controllers/home/location";
-
 $route['/'] = "app/controllers/home/index";
 
 

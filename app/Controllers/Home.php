@@ -6,6 +6,14 @@ class Home extends BaseController
 	{
 		return view('welcome_message');
 	}
+	public function info()
+	{
+		return view('info');
+	}
+	public function contact()
+	{
+		return view('contact');
+	}
 	public function offline()
 	{
 		return view('offline');

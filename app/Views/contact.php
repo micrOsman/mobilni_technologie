@@ -35,26 +35,14 @@
 </header>
 
 <main class="main">
-	<div class="card-spinner">
-		<svg viewBox="0 0 32 32" width="32" height="32">
-			<circle cx="16" cy="16" r="14" fill="none"></circle>
-		</svg>
-	</div>
 
-
-	<div id="about" class="weather-card">
-			<div class="input-group">
-				<input type="text" id="countryInput" class="form-control" placeholder="Insert name of country">
-				<div class="input-group-append">
-					<button class="btn btn-secondary" id="search_for_country" type="button">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-			</div>
-	</div>
-	<div id="results" class="weather-card">
-		<div class="input-group">
-			<h6>History (by click repeat search): </h6>
+	<div id="results" class="site weather-card">
+		<div class="col-sm-12">
+			<h6>Webová aplikace byla vytvořena do předmětu Mobilní technologie - A9MTE.</h6>
+			<br/>
+			<p>Autor: Vít Osička</p>
+			<p>Rok: 2020</p>
+			<p>Obor: PKS - Kombinované studium</p>
 
 		</div>
 	</div>
@@ -63,22 +51,22 @@
 	<div id="navigation">
 		<nav class="mobile-bottom-nav">
 			<a href="<?= base_url("/mob_tech")?>">
-			<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="fas fa-home"></i>
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="fas fa-home"></i>
 
+					</div>
 				</div>
-			</div>
 			</a>
 			<a href="<?= base_url("/mob_tech/info")?>">
-			<div class="mobile-bottom-nav__item">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="fas fa-info"></i>
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="fas fa-info"></i>
+					</div>
 				</div>
-			</div>
 			</a>
 			<a href="<?= base_url("/mob_tech/contact")?>">
-			<div class="mobile-bottom-nav__item">
+			<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
 				<div class="mobile-bottom-nav__item-content">
 					<i class="fas fa-phone"></i>
 				</div>
