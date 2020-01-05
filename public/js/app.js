@@ -20,7 +20,7 @@ function searchCountry(){
     success: function (response) {
 
       $.ajax({
-        url: 'home/location',
+        url: '/mob_tech/home/location',
         type: 'POST',
         data: {
           'object': response,
@@ -29,6 +29,7 @@ function searchCountry(){
         success: function (data) {
           $("#about").after(data.html);
           spinner.style.display="none";
+          document.querySelector('#results').style.display = "block";
           addToLocalStorageString('locationList',country.value,',');
           $("#results .input-group").append( "<button type=\"button\" class=\"btn btn-primary\">"+country.value+"</button>" );
         }, error: function (data) {
@@ -72,7 +73,7 @@ function searchCountryFromButton(button){
     success: function (response) {
 
       $.ajax({
-        url: 'home/location',
+        url: '/mob_tech/home/location',
         type: 'POST',
         data: {
           'object': response,

@@ -75,7 +75,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/offline', 'Home::offline');
 //Added route for ajax call
+$route['/mob_tech/home/location'] = "app/controllers/home/location";
 $route['home/location'] = "app/controllers/home/location";
+
 $route['/'] = "app/controllers/home/index";
 
 

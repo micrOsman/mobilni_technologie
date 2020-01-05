@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Country info</title>
 	<meta name="osicka" content="pwa-app">
-	<link rel="stylesheet" type="text/css" href="css/inline.css">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="canonical" href="https://localhost/mob_tech"/>
+	<link rel="stylesheet" type="text/css" href="/mob_tech/public/css/inline.css">
+	<link rel="icon" href="/mob_tech/public/images/favicon.ico" type="image/x-icon" />
 	<meta name="theme-color" content="#2F3BA2" />
 	<meta name="description" content="Country finder">
 	<!-- Added manifest.json -->
@@ -19,7 +20,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Weather PWA">
-	<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+	<link rel="apple-touch-icon" href="/mob_tech/public/images/icons/icon-152x152.png">
 
 
 </head>
@@ -64,10 +65,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.js" integrity="sha256-qYjc/rYiyC3fRkJ0uhvlRHog1iWl5TLR9d/PpzUYbh0=" crossorigin="anonymous"></script>
-<script src="js/luxon-1.11.4.js"></script>
-<script src="js/app.js"></script>
-<!-- CODELAB: Add the install script here -->
-<!-- <script src="/scripts/install.js"></script> -->
+<script src="/mob_tech/public/js/luxon-1.11.4.js"></script>
+<script src="/mob_tech/public/js/app.js"></script>
+<script src="/mob_tech/public/js/install.js"></script>
 
 <script>
 
