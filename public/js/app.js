@@ -40,7 +40,7 @@ function searchCountry(){
     error: function (response){
       notie.force({
         type: 3,
-        text: 'The country you specified does not exist, please enter another.',
+        text: 'The country you specified does not exist, please enter another or check internet connection.',
         buttonText: 'OK',
         callback: function () {
           spinner.style.display="none";
@@ -85,7 +85,14 @@ function searchCountryFromButton(button){
           addToLocalStorageString('locationList',button,',');
           $("#results .input-group").append( "<button type=\"button\" class=\"btn btn-primary\">"+button+"</button>" );
         }, error: function (data) {
-
+          notie.force({
+            type: 3,
+            text: 'The country you specified does not exist, please enter another or check internet connection.',
+            buttonText: 'OK',
+            callback: function () {
+              spinner.style.display="none";
+            }
+          })
         }
       });
     }

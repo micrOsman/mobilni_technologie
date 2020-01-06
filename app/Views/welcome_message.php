@@ -31,7 +31,7 @@
 		Search for country
 	</h1>
 	<button id="butInstall" aria-label="Install" hidden></button>
-	<button id="butRefresh" aria-label="Refresh"></button>
+
 </header>
 
 <main class="main">
